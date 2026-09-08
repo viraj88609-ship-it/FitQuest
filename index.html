@@ -1,522 +1,357 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo</title>
 
-  <title> FitQuest | Sports & Fitness</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+body{
+  background:#0f1020;
+  color:white;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
-      line-height: 1.6;
-    }
+.container{
+  display:flex;
+  flex-direction:row-reverse;
+  min-height:100vh;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.demo{
+  width:70%;
+  background:#111;
+  position:relative;
+}
 
-    header {
-      background: #0f172a;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+iframe{
+  width:100%;
+  height:100vh;
+  border:none;
+}
 
-    .logo {
-      color: #ffffff;
-      font-size: 27px;
-      font-weight: bold;
-    }
+.right{
+  width:30%;
+  padding:30px 22px;
+  background:linear-gradient(180deg,#181a35,#0b0c18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow-y:auto;
+}
 
-    .logo span {
-      color: #22c55e;
-    }
+.box{
+  width:100%;
+  background:rgba(10,10,10,.88);
+  border:1px solid #FF8C2B;
+  border-radius:22px;
+  padding:26px 20px;
+  text-align:center;
+  box-shadow:0 0 35px rgba(255,140,43,.28);
+}
 
-    nav a {
-      color: #d1d5db;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 15px;
-      transition: 0.3s;
-    }
+.badge{
+  display:inline-block;
+  background:#FF8C2B;
+  color:#fff;
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:800;
+  margin-bottom:16px;
+}
 
-    nav a:hover {
-      color: #22c55e;
-    }
+h1{
+  font-size:34px;
+  color:#FF8C2B;
+  margin-bottom:10px;
+  text-transform:uppercase;
+}
 
-    .hero {
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      padding: 80px 8%;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #ffffff;
-    }
+.sub{
+  font-size:17px;
+  line-height:1.5;
+  margin-bottom:22px;
+  color:#eee;
+}
 
-    .hero-content {
-      max-width: 1200px;
-      width: 100%;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 55px;
-    }
+.features{
+  display:grid;
+  gap:12px;
+  margin:22px 0;
+}
 
-    .hero-text {
-      flex: 1;
-    }
+.feature{
+  background:linear-gradient(90deg,#1b1b1b,#2b2208);
+  border:1px solid rgba(255,170,70,.55);
+  padding:14px;
+  border-radius:14px;
+  font-size:17px;
+  font-weight:700;
+}
 
-    .hero-text h1 {
-      font-size: 52px;
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
+.feature span{
+  color:#FF8C2B;
+}
 
-    .hero-text p {
-      color: #cbd5e1;
-      font-size: 18px;
-      max-width: 600px;
-    }
+/* Signup Button */
+.signup-btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:9px 16px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  border-radius:9px;
+  font-size:15px;
+  font-weight:800;
+  border:1px solid #1ebe5d;
+  transition:.3s;
+}
 
-    .hero-image {
-      flex: 1;
-    }
+.signup-btn:hover{
+  background:#1ebe5d;
+  transform:scale(1.03);
+}
 
-    .hero-image img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      border-radius: 22px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-    }
+.website-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:16px;
+  font-size:14px;
+  font-weight:bold;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 28px;
-      background: #22c55e;
-      color: #052e16;
-      padding: 14px 30px;
-      border-radius: 9px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+.website-row a{
+  text-decoration:none;
+}
 
-    .btn:hover {
-      background: #4ade80;
-      transform: translateY(-2px);
-    }
+.website{
+  color:#25D366;
+}
 
-    .section {
-      padding: 85px 8%;
-      text-align: center;
-    }
+.whatsapp-small{
+  color:#FF8C2B;
+}
 
-    .section h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
+.cta{
+  display:block;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  padding:17px;
+  border-radius:16px;
+  font-size:20px;
+  font-weight:900;
+  margin-top:22px;
+  box-shadow:0 8px 18px rgba(37,211,102,.35);
+  transition:.3s;
+}
 
-    .section-text {
-      max-width: 700px;
-      margin: 0 auto 45px;
-      color: #6b7280;
-      font-size: 17px;
-    }
+.cta:hover{
+  transform:scale(1.03);
+  background:#1ebe5d;
+}
 
-    .cards {
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
+/* Floating Signup Button */
+.floating-signup{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:50;
+  background:#FF8C2B;
+  color:#fff;
+  padding:12px 24px;
+  border-radius:8px;
+  font-size:18px;
+  font-weight:900;
+  border:3px solid #fff;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(255,140,43,0.6);
+  transition:.3s;
+  text-decoration:none;
+  display:inline-block;
+}
 
-    .card {
-      width: 320px;
-      background: #ffffff;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      transition: 0.3s;
-      text-align: left;
-    }
+.floating-signup:hover{
+  transform:translateX(-50%) scale(1.08);
+  background:#E66A1A;
+  box-shadow:0 12px 25px rgba(255,140,43,0.8);
+}
 
-    .card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-    }
+.trust{
+  margin-top:16px;
+  color:#ccc;
+  font-size:14px;
+  line-height:1.5;
+}
 
-    .card img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-    }
+.footer{
+  margin-top:18px;
+  font-size:12px;
+  color:#aaa;
+  line-height:1.5;
+}
 
-    .card-content {
-      padding: 25px;
-    }
+@media(max-width:768px){
+  .container{
+    flex-direction:column-reverse;
+  }
 
-    .card-content h3 {
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
+  .demo,
+  .right{
+    width:100%;
+  }
 
-    .card-content p {
-      color: #6b7280;
-      font-size: 15px;
-    }
+  iframe{
+    height:500px;
+  }
 
-    .about {
-      background: #ffffff;
-    }
+  .right{
+    padding:20px;
+  }
+}
 
-    .features {
-      max-width: 950px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      text-align: left;
-    }
+@media(max-width:480px){
+  h1{
+    font-size:28px;
+  }
 
-    .feature {
-      background: #f8fafc;
-      padding: 24px;
-      border-radius: 12px;
-      border: 1px solid #e5e7eb;
-    }
+  .sub{
+    font-size:16px;
+  }
 
-    .feature h3 {
-      color: #16a34a;
-      margin-bottom: 8px;
-      font-size: 19px;
-    }
+  .feature{
+    font-size:16px;
+    padding:12px;
+  }
 
-    .feature p {
-      color: #6b7280;
-      font-size: 15px;
-    }
+  .signup-btn{
+    font-size:14px;
+    padding:8px 13px;
+  }
 
-    .cta {
-      background: linear-gradient(135deg, #16a34a, #15803d);
-      color: white;
-    }
+  .cta{
+    font-size:18px;
+    padding:15px;
+  }
 
-    .cta h2 {
-      color: white;
-    }
+  .website-row{
+    flex-direction:column;
+    gap:8px;
+  }
+}
+</style>
 
-    .cta p {
-      max-width: 650px;
-      margin: 15px auto 5px;
-      color: #dcfce7;
-      font-size: 17px;
-    }
-
-    .cta .btn {
-      background: white;
-      color: #166534;
-    }
-
-    .cta .btn:hover {
-      background: #f0fdf4;
-    }
-
-    footer {
-      background: #0f172a;
-      color: #94a3b8;
-      text-align: center;
-      padding: 30px 8%;
-      font-size: 14px;
-    }
-
-    .footer-links {
-      margin-top: 12px;
-    }
-
-    .footer-links a {
-      color: #cbd5e1;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .footer-links a:hover {
-      color: #22c55e;
-    }
-
-    @media (max-width: 900px) {
-      .hero-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-text p {
-        margin: auto;
-      }
-
-      .hero-text h1 {
-        font-size: 42px;
-      }
-
-      .hero-image {
-        width: 100%;
-      }
-
-      .hero-image img {
-        height: 340px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-
-      .hero {
-        padding: 60px 6%;
-      }
-
-      .hero-text h1 {
-        font-size: 35px;
-      }
-
-      .hero-text p {
-        font-size: 16px;
-      }
-
-      .section {
-        padding: 60px 6%;
-      }
-
-      .section h2 {
-        font-size: 30px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        width: 100%;
-        max-width: 380px;
-      }
-
-      .hero-image img {
-        height: 280px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">Active<span>Zone</span></div>
+<div class="container">
 
-    <nav>
-      <a href="#activities">Activities</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="demo">
+    <a href="https://icecric.com/clk?src=27705d9eff" target="_blank" rel="noopener noreferrer" class="floating-signup">🔥 CLICK ON SIGNUP 🔥</a>
+    <iframe src="https://icecric.com/clk?src=27705d9eff"></iframe>
+  </div>
+
+  <div class="right">
+    <div class="box">
 
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
+  <div class="badge">AUTO WEBSITE</div>
 
-      <div class="hero-text">
-        <h1>Move Better. Stay Active. Enjoy Your Fitness Journey.</h1>
+  <h1>Get Your ID Now</h1>
 
-        <p>
-          Discover a welcoming space for sports, movement and everyday fitness.
-          Explore activities designed to support an active and balanced lifestyle.
-        </p>
+  <p class="sub">
+    Fast auto website service with easy deposit support.
+    New users can start quickly through WhatsApp.
+  </p>
 
-        <a href="#activities" class="btn">Explore Activities</a>
-      </div>
+  <div class="features">www.icecric.com
 
-      <div class="hero-image">
-        <img
-          src="images/gym-main.jpg"
-          alt="Modern gym and fitness training area"
-        >
-      </div>
-
+    <div class="feature">
+      Minimum Deposit: <span>₹100 Only</span>
     </div>
-  </section>
 
-
-  <!-- Activities Section -->
-  <section class="section" id="activities">
-
-    <h2>Explore Our Activities</h2>
-
-    <p class="section-text">
-      Discover different ways to stay active through fitness,
-      movement and recreational sports.
-    </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <img
-          src="images/strength.jpg"
-          alt="Strength training activity"
-        >
-
-        <div class="card-content">
-          <h3>Strength Training</h3>
-
-          <p>
-            Explore structured strength-focused activities in a comfortable
-            and supportive training environment.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="card">
-        <img
-          src="images/fitness.jpg"
-          alt="Active fitness session"
-        >
-
-        <div class="card-content">
-          <h3>Active Fitness</h3>
-
-          <p>
-            Enjoy movement-based activities designed to make regular
-            physical activity engaging and accessible.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="card">
-        <img
-          src="images/sports.jpg"
-          alt="Recreational sports activity"
-        >
-
-        <div class="card-content">
-          <h3>Sports Activities</h3>
-
-          <p>
-            Discover recreational sports and enjoyable ways
-            to stay active with others.
-          </p>
-        </div>
-      </div>
-
+    <div class="feature">
+      Welcome Bonus: <span>10%</span>
     </div>
-  </section>
 
-
-  <!-- About Section -->
-  <section class="section about" id="about">
-
-    <h2>A Positive Space For Movement</h2>
-
-    <p class="section-text">
-      FitQuest provides a simple and welcoming environment
-      where people can explore sports and fitness activities
-      at their own pace.
-    </p>
-
-    <div class="features">
-
-      <div class="feature">
-        <h3>✓ Flexible Activities</h3>
-
-        <p>
-          Choose from different activities based on your schedule
-          and personal interests.
-        </p>
-      </div>
-
-
-      <div class="feature">
-        <h3>✓ Supportive Environment</h3>
-
-        <p>
-          Enjoy sports and fitness in a friendly and positive setting.
-        </p>
-      </div>
-
-
-      <div class="feature">
-        <h3>✓ Modern Facilities</h3>
-
-        <p>
-          Access organized spaces designed for exercise
-          and recreational activities.
-        </p>
-      </div>
-
-
-      <div class="feature">
-        <h3>✓ Simple Experience</h3>
-
-        <p>
-          Explore activities with straightforward information
-          and a clean user experience.
-        </p>
-      </div>
-
+    <div class="feature">
+      Auto Website Support:
+      <a
+        class="signup-btn"
+        href="https://icecric.com/clk?src=27705d9eff"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Click on Signup
+      </a>
     </div>
-  </section>
 
+    <div class="feature">
+      Quick Help:
+      <span>Deposit &amp; Withdrawal Support</span>
+    </div>
 
-  <!-- CTA Section -->
-  <section class="section cta" id="contact">
+  </div>
 
-    <h2>Discover Your Next Activity</h2>
+  <div class="website-row">
 
-    <p>
-      Learn more about available sports and fitness activities
-      and find an option that works with your routine.
-    </p>
-
-    <a href="mailto:hello@example.com" class="btn">
-      Contact Us
+    <a
+      class="website"
+      href="https://icecric.com/clk?src=27705d9eff"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🌐 www.icecric.com
     </a>
 
-  </section>
+    <a
+      class="whatsapp-small"
+      href="https://wa.me/447777364879"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      💬 WhatsApp
+    </a>
+
+  </div>
+
+  <a
+    class="cta"
+    href="https://wa.me/447777364879?text=Hello%20I%20want%20new%20manual%20ID"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    📲 WhatsApp Now
+  </a>
+
+  <p class="trust">
+    ✅ Trusted Manual Support<br>
+    ✅ Simple Process<br>
+    ✅ Fast Response
+  </p>
+
+  <div class="footer">
+    18+ Only | Play Responsibly | Follow Your Local Laws | T&amp;C Apply
+  </div>
+
+</div>
 
 
-  <!-- Footer -->
-  <footer>
+  </div>
 
-    <p>© 2026 FitQuest. All Rights Reserved.</p>
-
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Contact</a>
-    </div>
-
-  </footer>
+</div>
 
 </body>
 </html>
