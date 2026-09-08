@@ -1,389 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>ActiveZone | Sports & Fitness</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #0f172a;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      color: #ffffff;
-      font-size: 26px;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: #22c55e;
-    }
-
-    nav a {
-      color: #d1d5db;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      color: #22c55e;
-    }
-
-    .hero {
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 8%;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #ffffff;
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      color: #cbd5e1;
-      font-size: 18px;
-      max-width: 680px;
-      margin: auto;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      background: #22c55e;
-      color: #052e16;
-      padding: 14px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #4ade80;
-    }
-
-    .section {
-      padding: 80px 8%;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-
-    .section-text {
-      max-width: 680px;
-      margin: 0 auto 45px;
-      color: #6b7280;
-    }
-
-    .cards {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      width: 300px;
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 35px 25px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .icon {
-      width: 55px;
-      height: 55px;
-      margin: 0 auto 20px;
-      background: #dcfce7;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 25px;
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 21px;
-    }
-
-    .card p {
-      color: #6b7280;
-      font-size: 15px;
-    }
-
-    .about {
-      background: #ffffff;
-    }
-
-    .features {
-      max-width: 900px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      text-align: left;
-    }
-
-    .feature {
-      background: #f8fafc;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .feature strong {
-      color: #16a34a;
-    }
-
-    .cta {
-      background: #16a34a;
-      color: white;
-    }
-
-    .cta h2 {
-      color: white;
-    }
-
-    .cta p {
-      max-width: 620px;
-      margin: 15px auto;
-      color: #dcfce7;
-    }
-
-    .cta .btn {
-      background: white;
-      color: #166534;
-    }
-
-    footer {
-      background: #0f172a;
-      color: #94a3b8;
-      text-align: center;
-      padding: 30px 8%;
-      font-size: 14px;
-    }
-
-    .footer-links {
-      margin-top: 12px;
-    }
-
-    .footer-links a {
-      color: #cbd5e1;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    @media (max-width: 768px) {
-
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero {
-        min-height: 450px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 60px 6%;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header>
-    <div class="logo">Active<span>Zone</span></div>
-
-    <nav>
-      <a href="#activities">Activities</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-
-      <h1>Move Better. Stay Active. Enjoy Your Fitness Journey.</h1>
-
-      <p>
-        Discover a welcoming space for sports, movement and everyday fitness.
-        Explore activities designed to support an active and balanced lifestyle.
-      </p>
-
-      <a href="#activities" class="btn">Explore Activities</a>
-
-    </div>
-  </section>
-
-
-  <!-- Activities -->
-  <section class="section" id="activities">
-
-    <h2>Explore Our Activities</h2>
-
-    <p class="section-text">
-      Choose from a range of fitness and sports activities based on your
-      interests, experience and personal routine.
-    </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">🏋️</div>
-        <h3>Strength Training</h3>
-        <p>
-          Access structured strength-focused activities in a comfortable,
-          supportive training environment.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🏃</div>
-        <h3>Active Fitness</h3>
-        <p>
-          Enjoy movement-based sessions designed to make regular physical
-          activity engaging and accessible.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🏀</div>
-        <h3>Sports Activities</h3>
-        <p>
-          Take part in recreational sports and discover enjoyable ways
-          to stay active with others.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- About -->
-  <section class="section about" id="about">
-
-    <h2>A Positive Space For Movement</h2>
-
-    <p class="section-text">
-      ActiveZone is focused on creating a simple, comfortable and
-      welcoming environment where people can enjoy sports and fitness
-      at their own pace.
-    </p>
-
-    <div class="features">
-
-      <div class="feature">
-        <strong>✓ Flexible Activities</strong>
-        <p>Choose activities that suit your schedule and interests.</p>
-      </div>
-
-      <div class="feature">
-        <strong>✓ Supportive Environment</strong>
-        <p>Enjoy fitness in a welcoming and positive setting.</p>
-      </div>
-
-      <div class="feature">
-        <strong>✓ Modern Facilities</strong>
-        <p>Access well-organized spaces for exercise and recreation.</p>
-      </div>
-
-      <div class="feature">
-        <strong>✓ Simple Experience</strong>
-        <p>Explore activities without complicated commitments.</p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CTA -->
-  <section class="section cta" id="contact">
-
-    <h2>Discover Your Next Activity</h2>
-
-    <p>
-      Learn more about available sports and fitness activities
-      and find an option that fits your routine.
-    </p>
-
-    <a href="mailto:hello@example.com" class="btn">
-      Contact Us
-    </a>
-
-  </section>
-
-
-  <!-- Footer -->
-  <footer>
-
-    <p>© 2026 ActiveZone. All Rights Reserved.</p>
-
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Contact</a>
-    </div>
-
-  </footer>
-
-</body>
-</html>
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  text-align: left;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    height: 280px;
+  }
+}
