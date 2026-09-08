@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Marketing Solutions</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      margin-left: 25px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      padding: 100px 8%;
+      text-align: center;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 25px auto;
+      font-size: 18px;
+      color: #6b7280;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .section {
+      padding: 80px 8%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+      color: #6b7280;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      width: 300px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .card p {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .about {
+      background: #ffffff;
+    }
+
+    .cta {
+      background: #111827;
+      color: white;
+    }
+
+    .cta p {
+      color: #d1d5db;
+      margin: 15px auto 25px;
+      max-width: 600px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0f172a;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        padding: 70px 6%;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .section {
+        padding: 60px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">MarketPro</div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+
+    <h1>Grow Your Brand With Smart Marketing Solutions</h1>
+
+    <p>
+      Build a stronger digital presence, reach the right audience
+      and create meaningful connections with modern marketing strategies.
+    </p>
+
+    <a href="#contact" class="btn">Get Started</a>
+
+  </section>
+
+
+  <section class="section" id="services">
+
+    <h2>Our Marketing Services</h2>
+
+    <p class="section-description">
+      Simple and effective marketing solutions designed to help
+      businesses improve visibility, engagement and brand awareness.
+    </p>
+
+    <div class="services">
+
+      <div class="card">
+        <h3>Digital Marketing</h3>
+        <p>
+          Create effective digital campaigns focused on reaching
+          relevant audiences across online platforms.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Social Media Marketing</h3>
+        <p>
+          Build your brand presence and connect with your audience
+          through engaging social media strategies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Brand Promotion</h3>
+        <p>
+          Improve brand awareness with creative promotional strategies
+          designed around your business goals.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="section about" id="about">
+
+    <h2>Marketing That Supports Your Growth</h2>
+
+    <p class="section-description">
+      We focus on clear communication, creative ideas and practical
+      marketing strategies that help businesses strengthen their
+      online presence and connect with potential customers.
+    </p>
+
+    <a href="#contact" class="btn">Learn More</a>
+
+  </section>
+
+
+  <section class="section cta" id="contact">
+
+    <h2>Ready To Grow Your Business?</h2>
+
+    <p>
+      Start building a stronger marketing presence and discover
+      new opportunities for your brand.
+    </p>
+
+    <a href="mailto:hello@example.com" class="btn">
+      Contact Us
+    </a>
+
+  </section>
+
+
+  <footer>
+    © 2026 MarketPro. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
