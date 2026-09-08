@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Smart Marketing Solutions</title>
+  <title>ActiveZone | Sports & Fitness</title>
 
   <style>
     * {
@@ -15,70 +15,82 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f7f9fc;
+      background: #f5f7fa;
       color: #1f2937;
       line-height: 1.6;
     }
 
     header {
-      background: #ffffff;
+      background: #0f172a;
       padding: 20px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #e5e7eb;
     }
 
     .logo {
-      font-size: 24px;
+      color: #ffffff;
+      font-size: 26px;
       font-weight: bold;
-      color: #2563eb;
+    }
+
+    .logo span {
+      color: #22c55e;
     }
 
     nav a {
+      color: #d1d5db;
       text-decoration: none;
-      color: #374151;
       margin-left: 25px;
       font-size: 15px;
     }
 
     nav a:hover {
-      color: #2563eb;
+      color: #22c55e;
     }
 
     .hero {
-      padding: 100px 8%;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, #eff6ff, #ffffff);
+      padding: 80px 8%;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #ffffff;
+    }
+
+    .hero-content {
+      max-width: 850px;
     }
 
     .hero h1 {
-      font-size: 48px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.2;
+      font-size: 52px;
+      line-height: 1.15;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      max-width: 650px;
-      margin: 25px auto;
+      color: #cbd5e1;
       font-size: 18px;
-      color: #6b7280;
+      max-width: 680px;
+      margin: auto;
     }
 
     .btn {
       display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 14px 28px;
+      margin-top: 30px;
+      background: #22c55e;
+      color: #052e16;
+      padding: 14px 30px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 10px;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: #1d4ed8;
+      background: #4ade80;
     }
 
     .section {
@@ -87,17 +99,17 @@
     }
 
     .section h2 {
-      font-size: 34px;
+      font-size: 36px;
       margin-bottom: 15px;
     }
 
-    .section-description {
+    .section-text {
+      max-width: 680px;
+      margin: 0 auto 45px;
       color: #6b7280;
-      max-width: 650px;
-      margin: 0 auto 40px;
     }
 
-    .services {
+    .cards {
       display: flex;
       justify-content: center;
       gap: 25px;
@@ -105,16 +117,33 @@
     }
 
     .card {
-      background: white;
       width: 300px;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 35px 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 20px;
+      background: #dcfce7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
     }
 
     .card h3 {
-      margin-bottom: 15px;
-      color: #111827;
+      margin-bottom: 12px;
+      font-size: 21px;
     }
 
     .card p {
@@ -126,26 +155,66 @@
       background: #ffffff;
     }
 
+    .features {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      text-align: left;
+    }
+
+    .feature {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .feature strong {
+      color: #16a34a;
+    }
+
     .cta {
-      background: #111827;
+      background: #16a34a;
+      color: white;
+    }
+
+    .cta h2 {
       color: white;
     }
 
     .cta p {
-      color: #d1d5db;
-      margin: 15px auto 25px;
-      max-width: 600px;
+      max-width: 620px;
+      margin: 15px auto;
+      color: #dcfce7;
+    }
+
+    .cta .btn {
+      background: white;
+      color: #166534;
     }
 
     footer {
-      text-align: center;
-      padding: 25px;
       background: #0f172a;
       color: #94a3b8;
+      text-align: center;
+      padding: 30px 8%;
       font-size: 14px;
     }
 
+    .footer-links {
+      margin-top: 12px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
     @media (max-width: 768px) {
+
       header {
         flex-direction: column;
         gap: 15px;
@@ -155,12 +224,16 @@
         margin: 0 8px;
       }
 
-      .hero {
-        padding: 70px 6%;
+      .hero h1 {
+        font-size: 38px;
       }
 
-      .hero h1 {
-        font-size: 36px;
+      .hero {
+        min-height: 450px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
       }
 
       .section {
@@ -172,64 +245,109 @@
 
 <body>
 
+  <!-- Header -->
   <header>
-    <div class="logo">MarketPro</div>
+    <div class="logo">Active<span>Zone</span></div>
 
     <nav>
-      <a href="#services">Services</a>
+      <a href="#activities">Activities</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
 
+  <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-content">
 
-    <h1>Grow Your Brand With Smart Marketing Solutions</h1>
+      <h1>Move Better. Stay Active. Enjoy Your Fitness Journey.</h1>
 
-    <p>
-      Build a stronger digital presence, reach the right audience
-      and create meaningful connections with modern marketing strategies.
-    </p>
+      <p>
+        Discover a welcoming space for sports, movement and everyday fitness.
+        Explore activities designed to support an active and balanced lifestyle.
+      </p>
 
-    <a href="#contact" class="btn">Get Started</a>
+      <a href="#activities" class="btn">Explore Activities</a>
 
+    </div>
   </section>
 
 
-  <section class="section" id="services">
+  <!-- Activities -->
+  <section class="section" id="activities">
 
-    <h2>Our Marketing Services</h2>
+    <h2>Explore Our Activities</h2>
 
-    <p class="section-description">
-      Simple and effective marketing solutions designed to help
-      businesses improve visibility, engagement and brand awareness.
+    <p class="section-text">
+      Choose from a range of fitness and sports activities based on your
+      interests, experience and personal routine.
     </p>
 
-    <div class="services">
+    <div class="cards">
 
       <div class="card">
-        <h3>Digital Marketing</h3>
+        <div class="icon">🏋️</div>
+        <h3>Strength Training</h3>
         <p>
-          Create effective digital campaigns focused on reaching
-          relevant audiences across online platforms.
+          Access structured strength-focused activities in a comfortable,
+          supportive training environment.
         </p>
       </div>
 
       <div class="card">
-        <h3>Social Media Marketing</h3>
+        <div class="icon">🏃</div>
+        <h3>Active Fitness</h3>
         <p>
-          Build your brand presence and connect with your audience
-          through engaging social media strategies.
+          Enjoy movement-based sessions designed to make regular physical
+          activity engaging and accessible.
         </p>
       </div>
 
       <div class="card">
-        <h3>Brand Promotion</h3>
+        <div class="icon">🏀</div>
+        <h3>Sports Activities</h3>
         <p>
-          Improve brand awareness with creative promotional strategies
-          designed around your business goals.
+          Take part in recreational sports and discover enjoyable ways
+          to stay active with others.
         </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section class="section about" id="about">
+
+    <h2>A Positive Space For Movement</h2>
+
+    <p class="section-text">
+      ActiveZone is focused on creating a simple, comfortable and
+      welcoming environment where people can enjoy sports and fitness
+      at their own pace.
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+        <strong>✓ Flexible Activities</strong>
+        <p>Choose activities that suit your schedule and interests.</p>
+      </div>
+
+      <div class="feature">
+        <strong>✓ Supportive Environment</strong>
+        <p>Enjoy fitness in a welcoming and positive setting.</p>
+      </div>
+
+      <div class="feature">
+        <strong>✓ Modern Facilities</strong>
+        <p>Access well-organized spaces for exercise and recreation.</p>
+      </div>
+
+      <div class="feature">
+        <strong>✓ Simple Experience</strong>
+        <p>Explore activities without complicated commitments.</p>
       </div>
 
     </div>
@@ -237,28 +355,14 @@
   </section>
 
 
-  <section class="section about" id="about">
-
-    <h2>Marketing That Supports Your Growth</h2>
-
-    <p class="section-description">
-      We focus on clear communication, creative ideas and practical
-      marketing strategies that help businesses strengthen their
-      online presence and connect with potential customers.
-    </p>
-
-    <a href="#contact" class="btn">Learn More</a>
-
-  </section>
-
-
+  <!-- CTA -->
   <section class="section cta" id="contact">
 
-    <h2>Ready To Grow Your Business?</h2>
+    <h2>Discover Your Next Activity</h2>
 
     <p>
-      Start building a stronger marketing presence and discover
-      new opportunities for your brand.
+      Learn more about available sports and fitness activities
+      and find an option that fits your routine.
     </p>
 
     <a href="mailto:hello@example.com" class="btn">
@@ -268,8 +372,17 @@
   </section>
 
 
+  <!-- Footer -->
   <footer>
-    © 2026 MarketPro. All Rights Reserved.
+
+    <p>© 2026 ActiveZone. All Rights Reserved.</p>
+
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact</a>
+    </div>
+
   </footer>
 
 </body>
